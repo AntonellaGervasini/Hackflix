@@ -5,12 +5,11 @@
 .imgHover:hover {
   z-index: 1;
   opacity: 1;
-  /* transition: 0.3s; */
-}
-/* .imgHover:hover {
   transform: scale(1.1);
- 
-} */
+}
+.imgHover:hover {
+  transition: 0.6s;
+}
 
 img {
   opacity: 0.9;

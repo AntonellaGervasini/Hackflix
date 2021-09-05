@@ -8,8 +8,8 @@ const Movies = ({ moviesFilter, ratingFilter }) => {
   const [activePage, setActivePage] = useState(1);
 
   const url = moviesFilter
-    ? "https://api.themoviedb.org/3/search/movie"
-    : "https://api.themoviedb.org/3/discover/movie";
+    ? `https://${process.env.REACT_APP_API_SEARCH_MOVIE}`
+    : `https://${process.env.REACT_APP_API_DISCOVER_MOVIE}`;
 
   // Se filtran las movies
   useEffect(() => {
@@ -71,7 +71,7 @@ const Movies = ({ moviesFilter, ratingFilter }) => {
               <Link to={`/pelicula/${movie.id}`}>
                 <img
                   className="img-fluid imgHover rounded-3 imageMovie"
-                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                  src={`https://${process.env.REACT_APP_API_IMG}/${movie.poster_path}`}
                   alt={movie.title}
                 />
               </Link>
@@ -89,9 +89,3 @@ const Movies = ({ moviesFilter, ratingFilter }) => {
 };
 
 export default Movies;
-
-// CLAVE DE LA API (v3 auth)  :   753ddc4b7d99a21e7ed72d82d147ef3a
-
-// Ejemplo de solicitud de API: https://api.themoviedb.org/3/movie/550?api_key=753ddc4b7d99a21e7ed72d82d147ef3a
-
-//Token de acceso de lectura a la API (v4 auth):  eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NTNkZGM0YjdkOTlhMjFlN2VkNzJkODJkMTQ3ZWYzYSIsInN1YiI6IjYxMDJiM2U0NDI4NGVhMDA3NGQxMjRkOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fpJwTjqeAaiT9WqadRVpkt2JWyhgW4900jrGTqoG228

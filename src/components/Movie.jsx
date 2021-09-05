@@ -10,7 +10,7 @@ const Movie = () => {
     async function getMovie() {
       const response = await axios({
         method: "get",
-        url: `https://api.themoviedb.org/3/movie/${id}`,
+        url: `https://${process.env.REACT_APP_API_MOVIE}/${id}`,
         params: {
           api_key: process.env.REACT_APP_API_KEY_PASS,
         },
