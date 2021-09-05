@@ -1,19 +1,16 @@
-body {
-  padding-top: 50px;
-}
-
 .bgHome {
   background-color: black;
 }
 
 .imgHover:hover {
-  /* transform: translateY(-15px); */
   z-index: 1;
   opacity: 1;
+  /* transition: 0.3s; */
 }
-.imgHover:hover {
+/* .imgHover:hover {
   transform: scale(1.1);
-}
+ 
+} */
 
 img {
   opacity: 0.9;

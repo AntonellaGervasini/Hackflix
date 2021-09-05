@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Contacto from "./components/Contact";
 import Home from "./components/Home";
-// import Movies from "./components/Movies";
 import Movie from "./components/Movie";
 import SobreNosotros from "./components/Sobre-nosotros";
 

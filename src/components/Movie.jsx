@@ -1,8 +1,7 @@
-// import Movies from "./Movies";
 import stylesMovie from "../components/Movie.module.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Movie = () => {
   const [movie, setMovie] = useState([]);
@@ -18,9 +17,6 @@ const Movie = () => {
       });
       console.log(response);
       setMovie(response.data);
-      // if (response.status === 200) {
-
-      // }
     }
     getMovie();
   }, [id]);
@@ -37,12 +33,15 @@ const Movie = () => {
   return (
     <div style={stylo}>
       <div className={`${stylesMovie.marginDiv} text-white `}>
-        <a href="/" class="btn ">
-          <i class={`${stylesMovie.arrow} fas fa-arrow-circle-left text-white`}>
+        <Link to="/">
+          <i
+            className={`${stylesMovie.arrow} fas fa-arrow-circle-left text-white`}
+          >
+            {" "}
             Back
           </i>
-        </a>
-        <div className="">
+        </Link>
+        <div>
           <h5 className={`${stylesMovie.stylesTitle} text-white `}>
             {movie.title}
           </h5>

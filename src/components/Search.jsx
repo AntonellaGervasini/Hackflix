@@ -18,7 +18,7 @@ const Search = ({
     console.log(value);
   };
 
-  //position-relative
+
   return (
     <div>
       <Navbar />
@@ -40,10 +40,10 @@ const Search = ({
           </label>
           <div className="d-flex justify-content-center">
             <input
-              class="form-control inputWidth mb-2"
+              className="form-control inputWidth mb-2"
               id="search"
               type="text"
-              placeholder="Ingresar el nombre de una película..."
+              placeholder="Buscar..."
               value={moviesFilter}
               onChange={handleChange}
             />

@@ -1,25 +1,26 @@
 import stylesNosotros from "../components/Nosotros.module.css";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const SobreNosotros = ({}) => {
   return (
     <div>
       <Navbar />
-      <div className="container pt-3">
-        <div class="row ">
-          <div class="col-lg-12">
-            <h1 class={stylesNosotros.pageHeader}>Sobre Nosotros</h1>
+      <div className={`${stylesNosotros.paddingTop} container`}>
+        <div className="row pt-5">
+          <div className="col-lg-12">
+            <h1 className={stylesNosotros.pageHeader}>Sobre Nosotros</h1>
           </div>
         </div>
-        <div class="row g-0">
-          <div class="col-md-6 sm-3">
+        <div className="row">
+          <div className="col-md-6 sm-3">
             <img
-              class="mb-3 me-0 pe-0"
+              className="d-none d-md-table-cell img-fluid"
               src="https://pbs.twimg.com/profile_images/1243623122089041920/gVZIvphd.jpg"
               alt="movies"
             />
           </div>
-          <div class="col-md-6 sm-3 ms-0 ps-0">
+          <div className="col-md-6 ">
             <h2>
               <span>The movies DB</span>
             </h2>
@@ -42,15 +43,9 @@ const SobreNosotros = ({}) => {
               necessitatibus perspiciatis quis?
             </p>
             <p>
-              <button
-                type="button"
-                name="button"
-                class="btn btn-outline-secondary mb-4"
-                data-bs-toggle="modal"
-                data-bs-target="#contacto-modal"
-              >
-                <i class="far fa-envelope"></i> Contacto
-              </button>
+              <Link to="/contacto" className="btn btn-outline-secondary mb-4">
+                <i className="far fa-envelope"></i> Contacto
+              </Link>
             </p>
           </div>
         </div>
