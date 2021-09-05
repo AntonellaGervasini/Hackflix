@@ -71,7 +71,7 @@ const Movies = ({ moviesFilter, ratingFilter }) => {
               <Link to={`/pelicula/${movie.id}`}>
                 <img
                   className="img-fluid imgHover rounded-3 imageMovie"
-                  src={`https://${process.env.REACT_APP_API_IMG}/${movie.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt={movie.title}
                 />
               </Link>
