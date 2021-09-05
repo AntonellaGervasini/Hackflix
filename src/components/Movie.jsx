@@ -23,16 +23,20 @@ const Movie = () => {
 
   const stylo = {
     backgroundImage: `radial-gradient(circle, rgba(34,34,34,0.44616967084639503) 0%, rgba(0,0,0,0.885041144200627) 80%), url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
     backgroundAttachment: "fixed",
     height: "100vh",
+    width: "100%",
+    position: "relative",
+    overflow: "auto",
+    top: "0",
   };
 
   return (
     <div style={stylo}>
-      <div className={`${stylesMovie.marginDiv} text-white `}>
+      <div className=" text-white">
         <Link to="/">
           <i
             className={`${stylesMovie.arrow} fas fa-arrow-circle-left text-white`}
@@ -47,7 +51,7 @@ const Movie = () => {
           </h5>
           {movie.image}
         </div>
-        <div className={`${stylesMovie.description} w-50 `}>
+        <div className={`${stylesMovie.description} w-50  pb-5`}>
           <p>{movie.overview}</p>
         </div>
       </div>

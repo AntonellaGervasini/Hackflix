@@ -1,10 +1,8 @@
-/* .generalContainer {
-  height: 100vh;
-} */
 
 .arrow {
   font-size: 2rem;
-  padding-bottom: 2rem;
+  margin-top: 10rem;
+  padding-bottom: 1rem;
   margin-left: 3rem;
   color: black;
 }
@@ -17,8 +15,4 @@
 }
 .description {
   margin-left: 3rem;
-}
-
-.marginDiv {
-  padding-top: 18rem !important;
 }
