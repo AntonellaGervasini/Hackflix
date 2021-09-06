@@ -11,7 +11,6 @@ const Movies = ({ moviesFilter, ratingFilter }) => {
     ? `https://${process.env.REACT_APP_API_SEARCH_MOVIE}`
     : `https://${process.env.REACT_APP_API_DISCOVER_MOVIE}`;
 
-  // Se filtran las movies
   useEffect(() => {
     async function getMovies() {
       setActivePage(1);
@@ -29,7 +28,6 @@ const Movies = ({ moviesFilter, ratingFilter }) => {
     getMovies();
   }, [moviesFilter]);
 
-  // Se activa cuando se cambia de pagina (ahora se agregan las paginas al final, no cambia)
   useEffect(() => {
     async function getMovies() {
       const response = await axios({
@@ -46,7 +44,6 @@ const Movies = ({ moviesFilter, ratingFilter }) => {
     getMovies();
   }, [activePage]);
 
-  // Pase de pagina, se ejecuta solo una vez
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (
