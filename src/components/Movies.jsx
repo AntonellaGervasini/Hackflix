@@ -74,12 +74,6 @@ const Movies = ({ moviesFilter, ratingFilter }) => {
               </Link>
             </div>
           ))}
-        {movies === null && (
-          <p>
-            Lo sentimos! Esa pelicula no se encuentra disponible. Intente buscar
-            otra!
-          </p>
-        )}
       </div>
     </div>
   );
